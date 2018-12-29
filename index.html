@@ -1,1 +1,23 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1,maximum-scale=1"><meta name=screen-orientation content=portrait><meta name=x5-orientation content=portrait><meta name=apple-mobile-web-app-capable content=yes><link rel=stylesheet href=./static/animation.css><link rel=stylesheet href=./static/public.css><script type=text/javascript src=https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js></script><script type=text/javascript src=./static/html2canvas.js></script><title></title><link href=/cup/static/css/app.07c1f25fb4f3cd35eda657d134e95c41.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/cup/static/js/manifest.fa9ed5b307e5021424c7.js></script><script type=text/javascript src=/cup/static/js/app.52e4d0bcd0aac885f61f.js></script></body></html>
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1,maximum-scale=1"><meta name=screen-orientation content=portrait><meta name=x5-orientation content=portrait><meta name=apple-mobile-web-app-capable content=yes><link rel=stylesheet href=./static/animation.css><link rel=stylesheet href=./static/public.css><script type=text/javascript src=https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js></script><script type=text/javascript src=./static/html2canvas.js></script><title></title><script type=text/javascript>function dynamicLoadCss(url) {
+		        var head = document.getElementsByTagName('head')[0];
+		        var link = document.createElement('link');
+		        link.type='text/css';
+		        link.rel = 'stylesheet';
+		        link.href = url;
+		        head.appendChild(link);
+		    }
+
+			function get_deviceInfo(){
+				  var device = navigator.userAgent;
+				  if (device.match('Android')) {
+				    return 'android';
+				  } else if (device.match('iPhone')) {
+				    return 'iphone';
+				  } else {
+				    return 'pc';
+				  }
+				}
+			///处理安卓1像素边框问题 单独处理
+			if(get_deviceInfo() === 'android'){
+				dynamicLoadCss('/static/css/fly.css')
+			}</script><link href=/cup/static/css/app.d5367d6456c43acd0db0ff3e5f96c8f2.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/cup/static/js/manifest.11b13f551b8a70700bb2.js></script><script type=text/javascript src=/cup/static/js/app.52e4d0bcd0aac885f61f.js></script></body></html>
